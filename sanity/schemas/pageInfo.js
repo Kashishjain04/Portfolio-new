@@ -35,6 +35,11 @@ export default {
 				hotspot: true,
 			},
 		},
+		{
+			name: "resume",
+			title: "Resume",
+			type: "url",
+		},
     {
       name: "phoneNumber",
       title: "Phone Number",

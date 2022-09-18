@@ -35,7 +35,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
 				<link rel="icon" href="/logo.png" />
 			</Head>
 			<main>
-				<Header socials={socials} email={pageInfo.email} />
+				<Header socials={socials} email={pageInfo?.email || ""} resume={pageInfo?.resume || ""} />
 
 				<section id="hero" className="snap-start">
 					<Hero pageInfo={pageInfo} />

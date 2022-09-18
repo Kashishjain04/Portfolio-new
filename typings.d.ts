@@ -25,6 +25,7 @@ export interface PageInfo extends SanityBody {
   heroImage: Image;
   phoneNumber: string;
   profilePic: Image;
+  resume: string;
   taglines: string[];
   socials: Social[];
 }

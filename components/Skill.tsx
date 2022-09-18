@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Skill } from "../typings";
 import { urlFor } from "../sanity";
 
@@ -11,7 +10,7 @@ type Props = {
 
 const Skill = ({ swipeLeft, skill }: Props) => {
 	return (
-		<Link href={skill?.documentation} target="_blank" rel="noopener noreferrer">
+		<a href={skill?.documentation} target="_blank" rel="noopener noreferrer">
 			<motion.div
 				initial={{ x: swipeLeft ? -100 : 100, opacity: 0 }}
 				whileInView={{ x: 0, opacity: 1 }}
@@ -25,7 +24,7 @@ const Skill = ({ swipeLeft, skill }: Props) => {
 					alt={skill?.title}
 				/>
 			</motion.div>
-		</Link>
+		</a>
 	);
 };
 

@@ -2,4 +2,4 @@
 User-agent: *
 
 Allow: /
-Sitemap: https://kashishjain.tech/sitemap
+Sitemap: https://kashishjain.tech/api/my-sitemap

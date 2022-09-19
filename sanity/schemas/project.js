@@ -18,6 +18,11 @@ export default {
 			},
 		},
 		{
+			name: "priority",
+			title: "Priority",
+			type: "number",
+		},
+		{
 			name: "summary",
 			title: "Summary",
 			type: "text",

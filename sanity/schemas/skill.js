@@ -22,5 +22,11 @@ export default {
 			title: "Documentation",
 			type: "url",
 		},
+		{
+			name: "proficiency",
+			title: "Proficiency",
+			type: "number",
+			validation: (Rule) => Rule.min(0).max(100),
+		}
 	],
 };

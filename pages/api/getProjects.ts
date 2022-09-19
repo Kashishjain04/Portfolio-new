@@ -8,7 +8,7 @@ const query = groq`
 		...,
 		technologies[]->
 	}
-	| order(_updatedAt desc)
+	| order(priority)
 `;
 
 type Data = {

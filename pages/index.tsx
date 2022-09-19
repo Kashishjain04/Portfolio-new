@@ -23,16 +23,30 @@ type Props = {
 	socials: Social[];
 };
 
-const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
+const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 	return (
 		<div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
 			<Head>
 				<title>Kashish Jain</title>
+				<link rel="canonical" href="https://kashishjain.tech" />
 				<meta
 					name="description"
 					content="Kashish Jain | Full Stack Web Developer | Freelancer. Kashish Jain is a Full Stack Software Developer, Freelancer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. Having clear understanding of Javascript, React, Redux, MERN and React Native and currently working on SwiftUI. Motivated to learn and grow in the Dev industry."
 				/>
 				<link rel="icon" href="/logo.png" />
+
+				{/* GTag Analytics */}
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-49SWEXX2BG" />
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-49SWEXX2BG');
+          `,
+					}}
+				/>
 			</Head>
 			<main>
 				<Header socials={socials} email={pageInfo?.email || ""} resume={pageInfo?.resume || ""} />
@@ -80,6 +94,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 			projects,
 			socials,
 		},
-		revalidate: 100
-	}
+		revalidate: 100,
+	};
 };

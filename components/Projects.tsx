@@ -35,7 +35,6 @@ const Projects = ({ projects }: Props) => {
 								<br />
 								<span className="font-semibold">Tech used: </span>{" "}
 								{project?.technologies.flatMap((tech) => tech.title).join(", ")}
-								API
 							</p>
 							<div className="flex items-center space-x-5">
 								{project?.demo && (

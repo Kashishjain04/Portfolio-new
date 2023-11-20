@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
 	return (
@@ -12,17 +13,16 @@ export default function Document() {
 				<link rel="icon" href="/logo.png" />
 
 				{/* GTag Analytics */}
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-49SWEXX2BG" />
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-49SWEXX2BG');
-          `,
-					}}
-				/>
+				<Script src="https://www.googletagmanager.com/gtag/js?id=G-49SWEXX2BG" />
+				<Script id="google-analytics">
+					{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-49SWEXX2BG');
+        `}
+				</Script>
 			</Head>
 			<body>
 				<Main />

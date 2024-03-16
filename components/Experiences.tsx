@@ -1,5 +1,5 @@
 import React from "react";
-import { Experience } from "../typings";
+import type { Experience } from "../typings";
 import ExperienceCard from "./ExperienceCard";
 import SectionParent from "./SectionParent";
 

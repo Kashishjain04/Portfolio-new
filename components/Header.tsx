@@ -1,7 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import { Social } from "../typings";
+import type { Social } from "../typings";
 
 type Props = {
 	socials: Social[];

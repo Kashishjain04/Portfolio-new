@@ -1,5 +1,5 @@
 import React from "react";
-import { Skill } from "../typings";
+import type { Skill } from "../typings";
 import SectionParent from "./SectionParent";
 import SkillCard from "./Skill";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionParent from "./SectionParent";
-import { Project } from "../typings";
+import type { Project } from "../typings";
 import { urlFor } from "../sanity";
 
 type Props = {
